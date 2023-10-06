@@ -27,17 +27,16 @@ const Home: React.FC = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Galeria de Fotos</h2>
           <div className="max-w-screen-xl mx-auto">
-            <Carousel showArrows={true} showStatus={false} showThumbs={false} infiniteLoop={true} autoPlay={true} interval={5000}>
+            <Carousel showArrows={true} showStatus={false} showThumbs={false} infiniteLoop={true} autoPlay={true} interval={4000}>
               <div>
-                <img src={img1} alt="Imagem 1" style={{ width: '50%', height: '50%' }} />
+                <img src={img1} alt="Imagem 1" style={{ width: '70%', height: '70%' }} />
               </div>
               <div>
-                <img src={img2} alt="Imagem 2" style={{ width: '50%', height: '50%' }} />
+                <img src={img2} alt="Imagem 2" style={{ width: '70%', height: '70%' }} />
               </div>
               <div>
-                <img src={img3} alt="Imagem 3" style={{ width: '50%', height: '50%' }} />
+                <img src={img3} alt="Imagem 3" style={{ width: '70%', height: '70%' }} />
               </div>
             </Carousel>
           </div>
