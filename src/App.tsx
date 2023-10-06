@@ -1,17 +1,24 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/home/Home';
-import Navbar from './components/NavBar';
-import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from './components/navbar/NavBar';
+import Footer from './components/footer/Footer'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
        <>
-    <Navbar/>
-    <Home/>
+       <BrowserRouter>
+        <Navbar />
+          <div className='min-h-[80vh]'>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
     </>
-    </Router>
   );
 }
 
