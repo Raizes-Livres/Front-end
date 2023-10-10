@@ -1,12 +1,19 @@
 import React from 'react';
 import './Login.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
+  let navigate = useNavigate()
+  
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    navigate('/home')
+  }
   
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
-        <form className="flex justify-center items-center flex-col w-1/2 gap-4" >
+        <form onSubmit={handleSubmit} className="flex justify-center items-center flex-col w-1/2 gap-4" >
           <h2 className="text-slate-900 text-5xl ">Entrar</h2>
           <div className="flex flex-col w-full">
             <label htmlFor="usuario">Usuário</label>
@@ -38,6 +45,9 @@ function Login() {
 
           <p>
             Ainda não tem uma conta?{' '}
+            <Link to="/cadastro" className="text-indigo-800 hover:underline">
+              Cadastre-se
+            </Link>
            
           </p>
         </form>
