@@ -11,6 +11,9 @@ import FormularioCategoria from './components/categorias/formularioCategoria/For
 import { AuthProvider } from './contexts/AuthContext';
 import DeletarCategorias from './components/categorias/deletarCategorias/DeletarCategorias';
 import ListaProdutos from './components/produtos/listaProdutos/ListaProdutos';
+import FormularioProduto from './components/produtos/formularioProdutos/FormularioProdutos';
+import DeletarProduto from './components/produtos/deletarProduto/deletarProduto';
+
 
 function App() {
   return (
@@ -29,6 +32,12 @@ function App() {
               <Route path="/categorias/:id" element={<FormularioCategoria />} />
               <Route path="/deletarCategoria/:id" element={<DeletarCategorias />} />
               <Route path="/produtos" element={<ListaProdutos />} />
+              <Route path="/cadastroProduto" element={<FormularioProduto />} />
+              <Route path="/editarProduto/:id" element={<FormularioProduto />} />
+              <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+
+
+
 
 
 

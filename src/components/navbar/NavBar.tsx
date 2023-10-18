@@ -11,6 +11,8 @@ const NavBar: React.FC = () => {
           <li><Link to="/produtos" className='hover:underline text-white'>Produtos</Link></li>
           <li><Link to="/categorias" className='hover:underline text-white'>Categorias</Link></li>
           <li><Link to="/CadastroCategoria" className='hover:underline text-white'>Cadastrar Categorias</Link></li>
+          <li><Link to="/CadastroProduto" className='hover:underline text-white'>Cadastrar Produtos</Link></li>
+
           <li><Link to="/login" className='hover:underline text-white'>Login</Link></li>
           <li><Link to="/contato" className='hover:underline text-white'>Contato</Link></li>
         </ul>

@@ -1,5 +1,5 @@
 import Categoria from './Categoria';
-import Usuario from './Usuario';
+import Usuario from './UsuarioLogin';
 
 export default interface Produto {
   id: number;
