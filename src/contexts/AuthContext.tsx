@@ -22,7 +22,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const [usuario, setUsuario] = useState<UsuarioLogin>({
         id: 0,
         nome: "",
-        email: "",
+        usuario: "",
         senha: "",
         foto: "",
         token: ""
@@ -33,7 +33,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     async function handleLogin(userLogin: UsuarioLogin) {
         setIsLoading(true)
         try {
-            await login(`/usuarios/logar`, userLogin, setUsuario)
+            await login(`/login`, userLogin, setUsuario)
             alert("Usuário logado com sucesso")
             setIsLoading(false)
 
@@ -48,7 +48,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         setUsuario({
             id: 0,
             nome: "",
-            email: "",
+            usuario: "",
             senha: "",
             foto: "",
             token: ""
