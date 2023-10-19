@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'https://raizes-livres.onrender.com'
+  baseURL: import.meta.VITE_API_URL
 })
 
 export const cadastrarUsuario = async(url: string, dados: Object, setDados: Function) => {
