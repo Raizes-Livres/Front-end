@@ -1,22 +1,22 @@
 import React from 'react';
-import FormularioPostagem from '../formularioPostagem/FormularioPostagem';
+import FormularioProdutos from '../FormularioProdutos/FormularioProdutos';
 
 import 'reactjs-popup/dist/index.css';
 import Popup from 'reactjs-popup';
 
-import './ModalPostagem.css'
+import './ModalProdutos.css'
 
-function ModalPostagem() {
+function ModalProdutos() {
   return (
     <>
       <Popup 
-      trigger={<button className='border rounded px-4 hover:bg-white hover:text-indigo-800'>Nova postagem</button>} modal>
+      trigger={<button className='border rounded px-4 hover:bg-white hover:text-indigo-800'>Novo Produto</button>} modal>
         <div>
-          <FormularioPostagem />
+          <FormularioProdutos />
         </div>
       </Popup>
     </>
   );
 }
 
-export default ModalPostagem;
+export default ModalProdutos;
