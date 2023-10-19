@@ -1,5 +1,5 @@
 import React from 'react';
-import FormularioProdutos from '../FormularioProdutos/FormularioProdutos';
+import FormularioProdutos from '../formularioProdutos/FormularioProdutos';
 
 import 'reactjs-popup/dist/index.css';
 import Popup from 'reactjs-popup';
