@@ -34,10 +34,14 @@ const NavBar: React.FC = () => {
     e.stopPropagation();
   };
 
+  const textShadowStyle = {
+    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' 
+  };
+
   return (
-    <nav className="bg-green-800 p-4">
+    <nav style={{ background: 'linear-gradient(to right, rgb(16, 185, 129), rgb(101, 163, 13))', backgroundClip: 'text', color: 'transparent' }} className="py-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-white text-2xl font-bold">
+        <Link to="/" className="text-white text-2xl font-bold" style={textShadowStyle}>
           Raízes Livres
         </Link>
 
@@ -72,32 +76,32 @@ const NavBar: React.FC = () => {
           onClick={handleMenuClick}
         >
           <li>
-            <Link to="/" className="hover:underline text-white">
+            <Link to="/" className="hover:underline text-white" style={textShadowStyle}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/produtos" className="hover:underline text-white">
+            <Link to="/produtos" className="hover:underline text-white" style={textShadowStyle}>
               Produtos
             </Link>
           </li>
           <li>
-            <Link to="/categorias" className="hover:underline text-white">
+            <Link to="/categorias" className="hover:underline text-white" style={textShadowStyle}>
               Categorias
             </Link>
           </li>
           <li>
-            <Link to="/CadastroCategoria" className="hover:underline text-white">
+            <Link to="/CadastroCategoria" className="hover:underline text-white" style={textShadowStyle}>
               Cadastrar Categorias
             </Link>
           </li>
           <li>
-            <Link to="/CadastroProduto" className="hover:underline text-white">
+            <Link to="/CadastroProduto" className="hover:underline text-white" style={textShadowStyle}>
               Cadastrar Produtos
             </Link>
           </li>
           <li>
-            <Link to="/login" className="hover:underline text-white">
+            <Link to="/login" className="hover:underline text-white" style={textShadowStyle}>
               Login
             </Link>
           </li>
