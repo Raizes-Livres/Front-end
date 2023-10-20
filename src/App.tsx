@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 import Login from './pages/login/Login'
 import Cadastro from './pages/cadastro/Cadastro'
 import Home from './pages/home/Home';
@@ -14,12 +15,14 @@ import ListaProdutos from './components/produtos/listaProdutos/ListaProdutos';
 import FormularioProduto from './components/produtos/formularioProdutos/FormularioProdutos';
 import DeletarProduto from './components/produtos/deletarProduto/deletarProduto';
 import Contato from './components/contato/Contato';
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
   return (
        <>
        <AuthProvider>
+       <ToastContainer />
        <BrowserRouter>
         <Navbar />
           <div className='min-h-[80vh]'>
@@ -37,7 +40,6 @@ function App() {
               <Route path="/editarProduto/:id" element={<FormularioProduto />} />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
               <Route path="/contato" element={<Contato />} />
-
 
 
 

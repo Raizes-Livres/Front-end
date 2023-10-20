@@ -59,7 +59,7 @@ function FormularioProduto() {
 
   useEffect(() => {
     if (token === '') {
-      alert('Você precisa estar logado');
+      toastAlerta('Você precisa estar logado', 'erro');
       navigate('/login');
     }
   }, [token]);
@@ -68,8 +68,6 @@ function FormularioProduto() {
     buscarCategorias();
     if (id !== undefined) {
       buscarProdutoPorId(id);
-      console.log(categoria);
-
     }
   }, [id]);
 
@@ -98,8 +96,6 @@ function FormularioProduto() {
   async function gerarNovoProduto(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    console.log({ produto });
-
     if (id != undefined) {
       try {
         await atualizar(`/produto`, produto, setProduto, {
@@ -111,7 +107,7 @@ function FormularioProduto() {
         retornar();
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          toastAlerta('O token expirou, favor logar novamente','info')
+          toastAlerta('O token expirou, favor logar novamente','erro')
           handleLogout()
         } else {
           toastAlerta('Erro ao atualizar o Produto','erro');
@@ -130,7 +126,7 @@ function FormularioProduto() {
         retornar();
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          toastAlerta('O token expirou, favor logar novamente','info')
+          toastAlerta('O token expirou, favor logar novamente','erro')
           handleLogout()
         } else {
           toastAlerta('Erro ao cadastrar o Produto','erro');

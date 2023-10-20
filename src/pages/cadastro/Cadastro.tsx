@@ -53,17 +53,14 @@ function Cadastro() {
 
   async function cadastrarNovoUsuario(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
-
     if (confirmaSenha === usuario.senha && usuario.senha.length >= 8) {
 
       try {
         await cadastrarUsuario(`/login/cadastrar`, usuario, setUsuarioResposta)
-        // toastAlerta('Usuário cadastrado com sucesso', 'sucesso')
-        alert('Cadastrado com Sucesso')
+        toastAlerta('Usuário cadastrado com sucesso', 'sucesso');
 
       } catch (error) {
-        // toastAlerta('Usuário cadastrado com sucesso', 'sucesso')
-        alert('Erro ao cadastrar')
+        toastAlerta('Erro ao se cadastrar', 'erro')
       }
 
     } else {
