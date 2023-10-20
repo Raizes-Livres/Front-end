@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   return (
     <div className="bg-gray-100">
 
-      <header className="bg-green-500 py-4">
+      <header className="bg-green-700 py-4">
         <div className="container mx-auto">
           <h1 className="text-4xl text-white">Bem-vindo ao Nosso Projeto</h1>
           <p className="text-lg text-white">Descubra nosso compromisso com alimentos sustentáveis.</p>

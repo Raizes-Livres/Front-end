@@ -92,7 +92,8 @@ function FormularioCategoria() {
 
   useEffect(() => {
     if (token === '') {
-      alert('Você precisa estar logado');
+      // alert('Você precisa estar logado');
+      toastAlerta('Você precisa estar logado', 'erro');
       navigate('/login');
     }
   }, [token]);

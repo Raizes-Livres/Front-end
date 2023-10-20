@@ -35,7 +35,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-green-500 p-4">
+    <nav className="bg-green-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-white text-2xl font-bold">
           Raízes Livres
@@ -102,9 +102,9 @@ const NavBar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="/contato" className="hover:underline text-white">
+            {/* <Link to="/contato" className="hover:underline text-white">
               Contato
-            </Link>
+            </Link> */}
           </li>
         </ul>
       </div>
