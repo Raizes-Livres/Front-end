@@ -29,13 +29,10 @@ const Home = () => {
       });
     };
 
-    // Adicione um ouvinte de evento de rolagem para chamar a função de animação.
     window.addEventListener('scroll', animateOnScroll);
 
-    // Chame a função de animação assim que a página for carregada.
     animateOnScroll();
 
-    // Lembre-se de remover o ouvinte de evento ao desmontar o componente.
     return () => {
       window.removeEventListener('scroll', animateOnScroll);
     };

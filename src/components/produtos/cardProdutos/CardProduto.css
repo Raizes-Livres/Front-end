@@ -3,3 +3,6 @@
     height: 9rem;
     object-fit: cover;
   }
+  .custom-background {
+    background-color: #1fb144;
+  }
