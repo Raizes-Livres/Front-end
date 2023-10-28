@@ -4,6 +4,7 @@ import Produto from '../../../models/Produto';
 import './CardProduto.css';
 import { Link } from 'react-router-dom';
 import { animateScroll as scroll } from 'react-scroll';
+import { XSquare } from '@phosphor-icons/react';
 
 interface CardProdutoAmpliadoProps {
   produto: Produto;
@@ -21,21 +22,19 @@ function CardProdutoAmpliado({ produto, onClose }: CardProdutoAmpliadoProps) {
   return (
     <div className="card-produto-ampliado">
       <div className='border-slate-900 border flex flex-col rounded overflow-hidden'>
-        <div className="flex w-full bg-green-600 py-2 px-4 items-center gap-4">
-          <img src={produto.usuario?.foto} className='h-12 rounded-full' alt="" />
-          <h3 className='text-lg font-bold text-center uppercase '>{produto.usuario?.nome}</h3>
-        </div>
-        <div className="flex">
-          <div className='p-4'>
-            <img
-              src={produto.foto}
-              alt=""
-              className='rounded fixed-image'
-              onClick={(e) => {
-                e.stopPropagation();
-              }}
-            />
-          </div>
+        {/* <div className="flex w-full bg-green-600 py-2 px-4 items-center gap-4">
+          <img src={produto.usuario?.foto} className='h-12 rounded-full' alt="" /> */}
+          {/* <h3 className='text-lg font-bold text-center uppercase '>{produto.usuario?.nome}</h3> */}
+        {/* </div> */}
+        <div className="image-and-text-container">
+          <img
+            src={produto.foto}
+            alt=""
+            className='rounded fixed-image'
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          />
           <div className='p-4 flex flex-col'>
             <h4 className='text-lg font-semibold uppercase'>{produto.nome}</h4>
             <p>{produto.descricao}</p>
@@ -53,7 +52,7 @@ function CardProdutoAmpliado({ produto, onClose }: CardProdutoAmpliadoProps) {
         </div>
       </div>
       <button className="close-button" onClick={onClose}>
-        Fechar
+      <XSquare size={32} />
       </button>
     </div>
   );
